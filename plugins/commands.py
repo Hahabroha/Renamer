@@ -21,25 +21,16 @@ from utils import extract_link, get_me_button, get_size
 logger = logging.getLogger(__name__)
 
 user_commands = [
-    "mdisk_api",
     "shortener_api",
     "header",
     "footer",
     "username",
     "banner_image",
-    "base_site",
     "me",
 ]
 avl_web = [
-    "droplink.co",
-    "gplinks.in",
-    "tnlink.in",
-    "za.gl",
-    "du-link.in",
-    "viplink.in",
-    "shorturllink.in",
-    "shareus.in",
-    "earnspace.in",
+    "zxlink.in",
+    "krishnalink.com",
 ]
 
 avl_web1 = "".join(f"- {i}\n" for i in avl_web)
