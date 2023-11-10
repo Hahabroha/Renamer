@@ -13,22 +13,22 @@ I'll handle the rest and get those links shortened or converted in a short time!
 
 START_MESSAGE = """Hi there {} 
 
-Hello, Khandu Don
 I Am krishnalink.com, Bulk Link Converter. I Can Convert Links Directly From Your krishnalink.com Account,
 
 1. Go To 👉 https://krishnalink.com/member/tools/api  
 2. Than Copy API Key
 3. Than Type /api than give a single space and than paste your API Key (see example to understand more...)
 
-/api(space)API Key 
+/shortener_api(space)API Key 
 (See Example.👇)
-Example: /api de303d5270f481aec928f39883da7b7f9a8812ac 
+Example: /shortener_api de303d5270f481aec928f39883da7b7f9a8812ac 
 
 ➕ Hit 👉 /help To Know More Features Of This Bot.
-➕ Hit 👉 /channel Command To Get Help About Adding your channel to bot.
+➕ Hit 👉 /header To Get Help About Adding your Custom Header to bot.
+➕ Hit 👉 /banner To Get Help About Adding your Custom Banner in posts.
 ➕ Hit 👉 /footer To Get Help About Adding your Custom Footer to bot.
 
-If You Want Any Other Shortner Link Converter Bot Instead Of krishnalink.com than contact at 👉 @BADAL6667RAI (all shortners support available.)
+If You Want Any Other Shortner Link Converter Bot Instead Of krishnalink.com than contact at 👉 @Badal6667Rai (all shortners support available.)
 """
 
 HELP_MESSAGE = """Hey there! My name is {firstname} and I'm a link convertor and shortener bot here to make your work easier and help you earn more 💰.
@@ -47,7 +47,6 @@ I have a ton of handy features to help you out, such as:
 Useful commands:
 
 - /start: Start me up! You probably already used this.
-- /help: Send this message; I'll tell you more about myself!
 - /batch -100xxx: To shorten or convert all posts in your channel
 """
 
@@ -94,16 +93,7 @@ Here is a list of the channels:
 HELP_REPLY_MARKUP = InlineKeyboardMarkup(
     [
         [
-            InlineKeyboardButton("Methods", callback_data="method_command"),
-            InlineKeyboardButton("Batch", callback_data="cbatch_command"),
-        ],
-        [
-            InlineKeyboardButton("Custom Alias", callback_data="alias_conf"),
-            InlineKeyboardButton("Admins", callback_data="admins_list"),
-        ],
-        [
-            InlineKeyboardButton("Channels", callback_data="channels_list"),
-            InlineKeyboardButton("Home", callback_data="start_command"),
+            InlineKeyboardButton("👈 BACK", callback_data="start_command"),
         ],
     ]
 )
@@ -112,22 +102,18 @@ HELP_REPLY_MARKUP = InlineKeyboardMarkup(
 ABOUT_REPLY_MARKUP = InlineKeyboardMarkup(
     [
         [
-            InlineKeyboardButton("Home", callback_data="start_command"),
-            InlineKeyboardButton("Help", callback_data="help_command"),
-        ],
-        [InlineKeyboardButton("Close", callback_data="delete")],
+            InlineKeyboardButton("👈 BACK", callback_data="start_command"),
     ]
 )
 
 START_MESSAGE_REPLY_MARKUP = InlineKeyboardMarkup(
     [
         [
-            InlineKeyboardButton("Help", callback_data="help_command"),
-            InlineKeyboardButton("About", callback_data="about_command"),
+            InlineKeyboardButton("Help ✍️", callback_data="help_command"),
+            InlineKeyboardButton("About 📢", callback_data="about_command"),
         ],
         [
-            InlineKeyboardButton("Method", callback_data="method_command"),
-            InlineKeyboardButton("Close", callback_data="delete"),
+            InlineKeyboardButton("GET API TOKEN 🔑", Url="https://krishnalink.com/member/tools/api"),
         ],
     ]
 )
