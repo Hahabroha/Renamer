@@ -115,7 +115,7 @@ START_MESSAGE_REPLY_MARKUP = InlineKeyboardMarkup(
             InlineKeyboardButton("About 📢", callback_data="about_command"),
         ],
         [
-            InlineKeyboardButton("GET API TOKEN 🔑", Url="https://krishnalink.com/member/tools/api"),
+            InlineKeyboardButton('GET API TOKEN 🔑', url="https://krishnalink.com/member/tools/api"),
         ],
     ]
 )
