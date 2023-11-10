@@ -44,7 +44,7 @@ async def refresh_cb(c, m):
                 return
         except UserNotParticipant:
             await m.answer(
-                "You have not yet joined our channel. First join and then press refresh button",
+                "Hey! Looks like you're an Admin! Join my Updates Channel, If u want to use me. First join and then press refresh button",
                 show_alert=True,
             )
 
