@@ -104,7 +104,7 @@ ABOUT_REPLY_MARKUP = InlineKeyboardMarkup(
         [
             InlineKeyboardButton("👈 BACK", callback_data="start_command"),
     ]
-)
+    ]
 
 
 START_MESSAGE_REPLY_MARKUP = InlineKeyboardMarkup(
