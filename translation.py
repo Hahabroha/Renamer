@@ -17,7 +17,7 @@ I Am krishnalink.com, Bulk Link Converter. I Can Convert Links Directly From You
 
 1. Go To 👉 https://krishnalink.com/member/tools/api  
 2. Than Copy API Key
-3. Than Type /api than give a single space and than paste your API Key (see example to understand more...)
+3. Than Type /shortener_api than give a single space and than paste your API Key (see example to understand more...)
 
 /shortener_api(space)API Key 
 (See Example.👇)
