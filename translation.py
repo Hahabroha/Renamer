@@ -57,7 +57,7 @@ ABOUT_TEXT = """
     
 `📝 Language:` [Python 3](https://www.python.org/)
 `🧰 Framework:` [Pyrogram](https://github.com/pyrogram/pyrogram)
-`📢 Admin:` [PERMANENT DM](https://T.Me/zxlink07)
+`📢 Admin:` [ ADMINS PERMANENT DM](https://T.Me/zxlink07)
 `👨‍💻 Developer:` [Dev](t.me/BADAL6667RAI)
 """
 
@@ -145,13 +145,9 @@ BACK_REPLY_MARKUP = InlineKeyboardMarkup(
 USER_ABOUT_MESSAGE = """
 🔧 Here are the current settings for this bot:
 
-- 🌐 Shortener website: {base_site}
+- 🌐 Shortener website: KrishnaLink.com
 
-- 🧰 Method: {method}
-
-- 🔌 {base_site} API: {shortener_api}
-
-- 💾 Mdisk API: {mdisk_api}
+- 🔌 Your API: {shortener_api}
 
 - 📎 Username: @{username}
 
@@ -165,24 +161,15 @@ USER_ABOUT_MESSAGE = """
 """
 
 
-MDISK_API_MESSAGE = """To add or update your Mdisk API, \n`/mdisk_api mdisk_api`
-            
-Ex: `/mdisk_api 6LZq851sXoPHugiKQq`
-            
-Others Mdisk Links will be automatically changed to the API of this Mdisk account
+MDISK_API_MESSAGE = """📢 MDISK SITE NOT SUPPORTED 
+"""
 
-Get your Mdisk API from @VideoToolMoneyTreebot
-
-Current Mdisk API: `{}`"""
-
-SHORTENER_API_MESSAGE = """To add or update your Shortner Website API, 
+SHORTENER_API_MESSAGE = """To add or update your Shortner API, 
 `/shortener_api [api]`
             
 Ex: `/shortener_api 6LZq851sXofffPHugiKQq`
 
-Current Website: {base_site}
-
-To change your Shortener Website: /base_site
+Current Website Supported: KrishnaLink.com
 
 Current Shortener API: `{shortener_api}`"""
 
@@ -227,17 +214,6 @@ Eg: `/banner_image https://www.nicepng.com/png/detail/436-4369539_movie-logo-fil
 
 INCLUDE_DOMAIN_TEXT = """
 Use this option if you want to short only links from the following domains list.
-
-Current Include Domain:
-{}
-Usage: /include_domain domain
-Ex: `/include_domain t.me, stack.com`
-
-To remove a domain,
-Ex: `/include_domain remove t.me`
-
-To remove all domains,
-Ex: `/include_domain remove_all`
 """
 
 EXCLUDE_DOMAIN_TEXT = """
