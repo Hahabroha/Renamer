@@ -74,26 +74,40 @@ class Bot(Client):
         await super().stop()
         logging.info("Bot Stopped Bye")
 
+
 # Load environment variables from .env file
 load_dotenv()
 
 # Replace placeholder values with environment variables
-shortener_site = os.environ.get("SHORTENER_SITE")
-api_key = os.environ.get("SHORTENER_API_KEY")
+shortener_site = os.environ.get("zxlink.in")
+api_key = os.environ.get("89e367badb1ee93eab04dd64450e18393d77d302")
 
 def verify(update, context):
+    user = update.effective_user
+    original_link = context.args[0] if context.args else None
+
     try:
+        # Debugging information
+        print(f"Shortener Site: {shortener_site}")
+        print(f"API Key: {api_key}")
+        print(f"Original Link: {original_link}")
+
         # Make a basic request to the shortener site
         response = requests.get(shortener_site)
         response.raise_for_status()
-        
+
+        # Debugging information
+        print("Request successful")
+
         context.bot.send_message(
             chat_id=update.effective_chat.id,
             text=f"Verification successful! Shortener site is accessible.",
         )
     except requests.RequestException as e:
+        # Debugging information
+        print(f"Request failed. Error: {str(e)}")
+
         context.bot.send_message(
             chat_id=update.effective_chat.id,
             text=f"Verification failed. Error: {str(e)}",
         )
-
