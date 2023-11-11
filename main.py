@@ -1,15 +1,18 @@
-from telegram.ext import Updater, CommandHandler
 import os
 from dotenv import load_dotenv
-from telegram.ext import Updater, CommandHandler  # Add this line
+from telegram.ext import Updater, CommandHandler
 
 # Load environment variables from .env file
 load_dotenv()
 
-# ... (rest of your code)
+# Replace "YOUR_BOT_TOKEN" with your actual Telegram bot token
+bot_token = os.environ.get("6563388880:AAEePBpgrmEOsEC2D3VB8QnF3ADiEIK87Hk")
+
+def start(update, context):
+    context.bot.send_message(chat_id=update.effective_chat.id, text="Hello! I'm your bot.")
 
 def main() -> None:
-    updater = Updater("6563388880:AAEePBpgrmEOsEC2D3VB8QnF3ADiEIK87Hk")
+    updater = Updater(bot_token)
     dp = updater.dispatcher
 
     # Register command handlers
