@@ -20,6 +20,28 @@ from database import db
 from helpers import ping_server
 from plugins import web_server
 
+import logging
+from config import SHORTLINK_URL, SHORTLINK_API, IS_SHORTLINK,
+from imdb import Cinemagoer 
+import asyncio
+from typing import Union
+from Script import script
+import pytz
+import random 
+import re
+import os
+from datetime import datetime, date
+import string
+from typing import List
+from database.users_chats_db import db
+from bs4 import BeautifulSoup
+import requests
+import aiohttp
+from shortzy import Shortzy
+import http.client
+import json
+
+
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.ERROR)
 
@@ -27,6 +49,9 @@ logger.setLevel(logging.ERROR)
 async def main_convertor_handler(
     message: Message, edit_caption: bool = False, user=None
 ):
+
+  imdb = Cinemagoer() 
+TOKENS = {} 
 
     """
     This function is used to convert a message to a different format
