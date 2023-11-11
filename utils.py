@@ -23,7 +23,7 @@ from helpers import ping_server
 from plugins import web_server
 
 import logging
-from config import SHORTLINK_URL, SHORTLINK_API, IS_SHORTLINK,
+from config import (SHORTLINK_URL, SHORTLINK_API, IS_SHORTLINK)
 from imdb import Cinemagoer 
 import asyncio
 from typing import Union
