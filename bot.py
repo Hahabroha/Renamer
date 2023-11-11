@@ -75,16 +75,13 @@ class Bot(Client):
         logging.info("Bot Stopped Bye")
 
 
-# Load environment variables from .env file
-load_dotenv()
-
-# Replace placeholder values with environment variables
-shortener_site = os.environ.get("zxlink.in")
-api_key = os.environ.get("89e367badb1ee93eab04dd64450e18393d77d302")
-
 def verify(update, context):
     user = update.effective_user
     original_link = context.args[0] if context.args else None
+
+    # Hardcoded values for testing
+    shortener_site = "zxlink.in"
+    api_key = "89e367badb1ee93eab04dd64450e18393d77d302"
 
     try:
         # Debugging information
@@ -111,3 +108,4 @@ def verify(update, context):
             chat_id=update.effective_chat.id,
             text=f"Verification failed. Error: {str(e)}",
         )
+
