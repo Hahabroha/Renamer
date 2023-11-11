@@ -9,7 +9,7 @@ load_dotenv()
 # ... (rest of your code)
 
 def main() -> None:
-    updater = Updater("YOUR_BOT_TOKEN")
+    updater = Updater("6563388880:AAEePBpgrmEOsEC2D3VB8QnF3ADiEIK87Hk")
     dp = updater.dispatcher
 
     # Register command handlers
