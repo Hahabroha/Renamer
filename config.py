@@ -1,4 +1,7 @@
 import os
+import re
+from os import environ,getenv
+from Script import script 
 
 from dotenv import load_dotenv
 
@@ -25,7 +28,9 @@ ADMINS = (
     if os.environ.get("ADMINS")
     else []
 )
-
+VERIFY = bool(environ.get('VERIFY', True))
+SHORTLINK_URL = environ.get('SHORTLINK_URL', 'ez4short.com')
+SHORTLINK_API = environ.get('SHORTLINK_API', 'ade16f386d69aa3d86d6320b5b2c906996a8d2a6')
 DATABASE_NAME = os.environ.get("DATABASE_NAME", "MdiskConvertor")
 DATABASE_URL = os.environ.get(
     "DATABASE_URL", None
