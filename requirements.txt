@@ -17,3 +17,16 @@ pyshorteners
 apscheduler
 jinja2
 colorama
+git+https://github.com/Joelkb/cinemagoer 
+ shortzy 
+ datetime 
+ pytz 
+ aiohttp
+
+#---master---# 
+ #Telethroid==0.0.10 
+ PyLeaves==1.0.2 
+requests
+aiohttp
+aiofiles
+pyromod
