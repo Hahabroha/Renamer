@@ -12,7 +12,7 @@ def start(update, context):
     context.bot.send_message(chat_id=update.effective_chat.id, text="Hello! I'm your bot.")
 
 def main() -> None:
-    updater = Updater(bot_token)
+    updater = Updater("6563388880:AAEePBpgrmEOsEC2D3VB8QnF3ADiEIK87Hk")
     dp = updater.dispatcher
 
     # Register command handlers
@@ -21,6 +21,7 @@ def main() -> None:
 
     updater.start_polling()
     updater.idle()
+
 
 if __name__ == '__main__':
     main()
