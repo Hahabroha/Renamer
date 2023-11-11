@@ -4,6 +4,10 @@ import datetime
 import logging
 import logging.config
 import sys
+import os
+from dotenv import load_dotenv
+import requests
+
 
 from pyrogram import Client
 
@@ -69,3 +73,27 @@ class Bot(Client):
         await broadcast_admins(self, "** Bot Stopped Bye **")
         await super().stop()
         logging.info("Bot Stopped Bye")
+
+# Load environment variables from .env file
+load_dotenv()
+
+# Replace placeholder values with environment variables
+shortener_site = os.environ.get("SHORTENER_SITE")
+api_key = os.environ.get("SHORTENER_API_KEY")
+
+def verify(update, context):
+    try:
+        # Make a basic request to the shortener site
+        response = requests.get(shortener_site)
+        response.raise_for_status()
+        
+        context.bot.send_message(
+            chat_id=update.effective_chat.id,
+            text=f"Verification successful! Shortener site is accessible.",
+        )
+    except requests.RequestException as e:
+        context.bot.send_message(
+            chat_id=update.effective_chat.id,
+            text=f"Verification failed. Error: {str(e)}",
+        )
+
