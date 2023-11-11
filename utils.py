@@ -58,19 +58,8 @@ TOKENS = {}
 class temp(object):
   ME = None
   SHORT = {}
+
   
-
-    """
-    This function is used to convert a message to a different format
-
-    :param message: The message object that the user sent
-    :type message: Message
-    :param type: str - The type of the media to be converted
-    :param edit_caption: If you want to edit the caption of the message, set this to True, defaults to
-    False
-    :type edit_caption: bool (optional)
-    :param user: The user who sent the message
-    """
     if user:
         header_text = (
             user["header_text"].replace(
