@@ -46,13 +46,11 @@ import json
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.ERROR)
 
-
 async def main_convertor_handler(
     message: Message, edit_caption: bool = False, user=None
 ):
-
-  imdb = Cinemagoer() 
-TOKENS = {}
+    imdb = Cinemagoer() 
+    TOKENS = {}
   
     if user:
         header_text = (
@@ -67,6 +65,7 @@ TOKENS = {}
         banner_image = user["banner_image"] if user["is_banner_image"] else None
 
     caption = None
+
 
     if message.text:
         caption = message.text.html
