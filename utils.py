@@ -27,7 +27,6 @@ from config import (SHORTLINK_URL, SHORTLINK_API, IS_SHORTLINK)
 from imdb import Cinemagoer 
 import asyncio
 from typing import Union
-from Script import script
 import pytz
 import random 
 import re
@@ -54,11 +53,6 @@ async def main_convertor_handler(
 
   imdb = Cinemagoer() 
 TOKENS = {}
-
-class temp(object):
-  ME = None
-  SHORT = {}
-
   
     if user:
         header_text = (
