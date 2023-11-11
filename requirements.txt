@@ -8,8 +8,12 @@ mdisky
 shortzy
 aiofiles
 validators
-python-dotenv
-uvloop
-pyshorteners 
-requests>=2.25.1
-python-telegram-bot==13.12
+uvloop 
+opencv-python-headless==4.7.0.68
+python-dotenv==0.21.1
+humanize==4.6.0 
+Pillow==9.4.0 
+pyshorteners
+apscheduler
+jinja2
+colorama
